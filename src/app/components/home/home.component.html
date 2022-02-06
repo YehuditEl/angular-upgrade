@@ -1,0 +1,7 @@
+<app-claim-main [processModel]="process" (refresh)="refreshProcess()"></app-claim-main>
+<app-insured [process]="process" [countContacts]="contacts.contactPersons.length"
+             (addInsuredToContact)="contacts.addInsured2Contacts($event)"
+             (resetContactsEvent)="contacts.resetContacts()"
+                       (deleteContactsEvent)="contacts.deleteContacts()"
+             > </app-insured>
+<app-contacts #contacts [process]="process"></app-contacts>
